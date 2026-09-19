@@ -119,6 +119,8 @@ universe_root: <宇宙目录>         # 默认 <技能仓>/universe；也可指�
 
 **ROI 模式**：`/bookverse roi`——阅读投入产出报表：按主题域盘点成本与回报（概念/边/涌现/立场/物料/被引用度），给出边际回报与投入建议；口径与产出见 references/roi.md。
 
+**众包模式**：贡献者协作拆书——读 references/crowd.md（认领 issue → 本地拆 → PR 包 → 双仓 PR → 维护者合并）。触发：用户以贡献者身份拆书、或说「众包 / 协作拆书 / 发 PR」；拆书完成时若走众包轨道，**生成 `PR-PACKAGE.md`**（书目录根部：宇宙增量 + 涌现候选 + 抽验材料 + 自检结果，格式见 crowd.md）。
+
 **回审模式**：闸门/规范升级后对存量书目的回审——按现行 review-panel.md 三角色逐产物审查（FIX 带原文证据落盘各书 `06-takeaway/review-log.md`），产出 universe/records/reviews/review-<yyyy-MM-dd>[-标题].md（逐书裁决/共性病灶/修复清单/修复记录），修复完成后存量与新标准对齐。先例：REVIEW-001（2026-09-17，digest 与评审组上线后的六本回审）。
 
 ## 确认点协议
@@ -152,3 +154,4 @@ universe_root: <宇宙目录>         # 默认 <技能仓>/universe；也可指�
 | step 5 | stage5-review.md |
 | step 6 | stage6-takeaway.md、review-panel.md |
 | step 7 | persona.md（已在上下文则免） |
+| 众包轨道 | crowd.md（用户说「众包/协作/发 PR」时） |

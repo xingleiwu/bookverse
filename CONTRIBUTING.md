@@ -31,7 +31,7 @@
 - 涉及 universe_rebuild 的改动：**幂等性验证**（连续跑两遍，第二遍无 diff）
 - 不引入第三方依赖（零依赖是既定约束）
 
-### 3. 数据 PR（数据仓 corpus/；技能仓 universe/ 的改动走维护者流程）
+### 3. 数据 PR（众包拆书——完整流程见 skill/references/crowd.md：认领 issue → 本地拆 → PR-PACKAGE → 主 PR 发 bookcorpus、宇宙增量副 PR 发本仓）
 
 拆书产物与宇宙数据，**一书一 PR**：
 

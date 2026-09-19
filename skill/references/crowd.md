@@ -45,7 +45,10 @@ python3 ~/.agents/skills/bookverse/scripts/check_punctuation.py corpus/<分类>/
 
 ### 5. 审查（PR 上的三层）
 1. **机器层（CI）**：validate.py、标点检查、版权护栏（fulltext/PDF 零容忍）、rebuild 幂等
-2. **抽验层**：PR 描述必须给 3-5 条抽验（论断 → [原文·行号] → 上下文引句）；有原书的审查者本地核对，没有的审逻辑与格式
+2. **抽验层**：PR 描述必须给 3-5 条抽验（论断 → [原文·行号] → 上下文引句）。核验三通道（任选其一）：
+   - **自取原书**：审查者下载或自有目标电子书，按引句内容核对——注意行号定位的是贡献者的 fulltext.md，不同版本会漂移，**以引句文字在书中的真实存在为准，行号仅辅助**
+   - **fulltext 临时通道**：应审查者要求，贡献者经私密渠道（私有 Gist / 会话附件）临时提供 fulltext.md 供核验，核验后即删——**绝不进仓库**（版权红线不因核验需要而松动）
+   - 无书无 fulltext：退而审逻辑、格式与信源标注纪律
 3. **评审层**：review-log 中的 FIX 是否处置完整；去AI味是否达标
 
 ### 6. 合并（维护者，见第三节）
@@ -72,7 +75,7 @@ merge 后维护者 rebuild 宇宙、裁决涌现候选、close issue；贡献者
 
 1. CI 全绿（四项）
 2. review-log 三角色齐、FIX 处置完整
-3. 亲手抽验 ≥2 条（对照自有原书或公版来源；核不了的在 PR 标注「未核」并要求第二审查者）
+3. 亲手抽验 ≥2 条——通道任选：自有/下载原书、贡献者私密通道临时提供的 fulltext（核后删）、公版来源；**以引句文字真实存在为准，行号仅辅助**（版本漂移）；核不了的标注「未核」并要求第二审查者
 4. `book_lookup.py` 终查重（版本冲突 → 重读轨道，teardown-version 递增而非覆盖）
 5. 合并顺序：**先 merge bookcorpus PR，再 merge bookverse 副 PR** → 在 bookverse 跑 `universe_rebuild.py` → commit AUTO 产物（edges/LIBRARY/index 更新）
 6. 人格侧：把 PR-PACKAGE 的涌现候选过确认点 C（默认入库/否决留痕）→ close 认领 issue → 必要时更新 frontier（外延书单去重）
@@ -88,6 +91,6 @@ merge 后维护者 rebuild 宇宙、裁决涌现候选、close issue；贡献者
 | persona / 涌现裁决 | ❌ 禁改 | ✅ 独占 |
 | skill 规范 | 走 bookverse 规范 PR | 先贤评审级门槛 |
 
-**版权红线**：`00-source/fulltext.md` 与任何 PDF/EPUB 原件禁止提交（CI 检查，零容忍）；拆解产物中的原文摘录属评注引用，贡献者对自提交内容的版权边界自负。
+**版权红线**：`00-source/fulltext.md` 与任何 PDF/EPUB 原件禁止提交（CI 检查，零容忍）；fulltext 核验临时通道只走私密渠道、核后即删，不以任何形式入库；拆解产物中的原文摘录属评注引用，贡献者对自提交内容的版权边界自负。
 
 **质量红线**：无 review-log 不合；行号抽验失败退回；去AI味不过退回——退回时在 PR 给出具体段落级意见，不做整体否决。

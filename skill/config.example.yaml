@@ -1,0 +1,14 @@
+# bookverse 配置模板 —— 复制到 ~/.agents/skills/bookverse/config.yaml 并填入本机路径。
+# 首次使用 /bookverse 时会自动引导生成；直接编辑即可修改，改完即生效。
+
+# 私有书库根目录（可选）：电子书 PDF 分类目录树（如 03_经济与投资/…）
+# step 1 取书、frontier 📚 对照；留空则走联网调研模式
+library_root: <书库根目录>
+
+# 数据仓根目录（独立 git）：corpus/<书库分类层级>/<slug>/ 拆书产物落这里
+corpus_root: <数据仓根目录>
+
+# 阅读宇宙目录：默认 <技能仓>/universe；也可指向自建数据仓
+universe_root: <宇宙目录>
+
+# 兼容：旧版 workspace_root 单根布局仍被识别（corpus 与 universe 同根时）

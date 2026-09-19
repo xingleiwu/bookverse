@@ -1,0 +1,11 @@
+# 本机配置（含真实路径，绝不入库）
+skill/config.yaml
+
+# Python / macOS
+__pycache__/
+*.pyc
+.DS_Store
+
+# 备份与临时
+*.bak*
+*.tmp

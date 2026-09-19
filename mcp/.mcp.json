@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "reading-universe": {
+      "command": "python3",
+      "args": [
+        "<bookverse 项目路径>/bookverse/mcp/server.py"
+      ]
+    }
+  }
+}

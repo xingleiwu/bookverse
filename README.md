@@ -32,19 +32,83 @@
 
 **协作方式见 [CONTRIBUTING.md](CONTRIBUTING.md)**——规范 PR、工具 PR、数据 PR（一书一 PR）各有验收门槛。
 
-## 安装与快速上手
+## 安装与上手
 
+### 0. 前置条件
+
+| 依赖 | 说明 |
+|---|---|
+| 支持 skills 的 coding agent | ZCode / Claude Code 等（需子 agent 派生 + 联网检索能力） |
+| Python ≥ 3.8 | 脚本零第三方依赖，`python3 --version` 确认 |
+| git | 拉取技能仓与数据仓 |
+| 可选：本地书库 | 电子书 PDF/EPUB 分类目录；没有也能拆（联网调研模式，无原文降级） |
+| macOS 专属 | 扫描版 PDF OCR 用 `skill/scripts/ocr.swift`（Vision 框架）；其他平台需自配 OCR |
+
+### 1. 安装技能仓（两种方式）
+
+**方式 A · 拷贝安装（使用者）**——装的是快照，更新需重新拷贝：
 ```bash
-git clone <repo> bookverse && cd bookverse
-cp -r skill/ ~/.agents/skills/bookverse/     # ZCode；兼容 skills 目录约定的 agent 通用
+git clone git@github.com:godlockin/bookverse.git && cd bookverse
+cp -r skill/ ~/.agents/skills/bookverse/
 ```
 
-首次运行任意拆书指令（如「拆解《XX》」）会自动引导配置书库与结果目录。可选：把阅读宇宙接进 MCP 客户端（见 [mcp/README.md](mcp/README.md)）。
+**方式 B · 符号链接（推荐，仓库 `git pull` 即生效）**：
+```bash
+git clone git@github.com:godlockin/bookverse.git ~/path/to/bookverse
+ln -s ~/path/to/bookverse/skill ~/.agents/skills/bookverse
+```
+> Claude Code 等若用别的 skills 目录（如 `~/.claude/skills/`），把链接目标换成对应目录即可。
+
+### 2. 准备数据仓（三选一）
+
+```bash
+# ① 用官方数据仓（含已拆书目，可直接续拆/对照）
+git clone git@github.com:godlockin/bookcorpus.git ~/path/to/bookcorpus
+
+# ② 自建空数据仓（从零开始自己的宇宙）
+mkdir -p ~/path/to/my-corpus/corpus
+python3 ~/.agents/skills/bookverse/scripts/universe_rebuild.py ~/path/to/my-corpus/universe --init
+
+# ③ 先试用不落盘：跳过，首跑引导会替你处理
+```
+
+> 注意：官方数据仓的宇宙（universe）在**本仓库**内——用方式①时 `universe_root` 填本仓的 `universe/` 目录。
+
+### 3. 初始化配置
+
+**自动引导**：配置不存在时，第一次说「拆解《XX》」会触发三步引导（数据仓 clone/初始化 → `corpus_root` → `universe_root`，可选 `library_root`），答完写盘、当次任务不中断。
+
+**手工配置**：创建 `~/.agents/skills/bookverse/config.yaml`（模板见 [skill/config.example.yaml](skill/config.example.yaml)）：
+```yaml
+library_root: /path/to/your/pdf-library     # 私有书库（可选，留空走联网调研模式）
+corpus_root: /path/to/bookcorpus            # 数据仓根（corpus/ 的父目录）
+universe_root: /path/to/bookverse/universe  # 宇宙目录（官方布局=本仓 universe/；自建仓指向自己的）
+```
+
+### 4. 验证安装（三条命令）
+
+```bash
+python3 ~/.agents/skills/bookverse/scripts/validate.py <corpus根> <universe目录>   # 结构校验，exit 0 即过
+python3 ~/.agents/skills/bookverse/scripts/book_lookup.py --list                   # 列出已拆书目
+python3 <bookverse仓>/mcp/test_client.py                                           # MCP 冒烟（装了 MCP 再跑）
+```
+
+### 5. 首次拆书
 
 1. 准备一本电子书（PDF/EPUB/DOCX/TXT/MD；只有书名则走联网调研模式）
 2. 对 agent 说「拆解这本书：<文件路径>」
 3. 确认点 A 检查专家编排 → 之后按确认点推进（说「全自动」可跳过 A/C）
-4. 拆完看数据仓的 `universe/LIBRARY.md`：主题域分组书目树 + 产物齐缺 + 概念域索引
+4. 拆完看 `universe/LIBRARY.md`：主题域分组书目树 + 产物齐缺 + 概念域索引
+5. 不确定值不值得全拆？先说「轻拆」（digest+书评+核心产物，约一半成本）；三档深度判据见 SKILL.md
+
+### 6. 更新与卸载
+
+- 更新：方式 B 用户 `git pull` 即生效；方式 A 重新 `cp -r`；版本变化看 [CHANGELOG.md](CHANGELOG.md)
+- 卸载：删 `~/.agents/skills/bookverse` 与本仓库即可——你的数据（corpus/universe/config）独立在数据仓，不受影响
+
+### 7. 可选：阅读宇宙接进 MCP 客户端
+
+在任意 MCP 客户端（ZCode / Claude Desktop / Cursor）注册 `reading-universe` 服务器，日常对话即可检索/引用你拆过的书——注册步骤见 [mcp/README.md](mcp/README.md)。
 
 ## 运行要求
 

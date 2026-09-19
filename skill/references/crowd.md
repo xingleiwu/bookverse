@@ -6,12 +6,21 @@
 
 ## 一、贡献者流程（七步）
 
-### 0. 环境
+### 0. 环境（fork 工作流）
+
+**安装技能与基础环境**：按技能仓 README「安装与上手」第 0-4 步走一遍（前置条件 → 安装技能仓 → 数据仓 → 配置 → 验证），确保 `validate.py` 与 `book_lookup.py --list` 都能跑。
+
+**fork 与工作副本**（贡献者无主仓推送权，一切经 PR）：
 ```bash
-git clone git@github.com:godlockin/bookverse.git && cp -r bookverse/skill/ ~/.agents/skills/bookverse/
-git clone git@github.com:godlockin/bookcorpus.git   # 数据仓工作副本
-git clone git@github.com:godlockin/bookverse.git bookverse-universe  # 宇宙工作副本（读参照 + 可能的宇宙 PR）
+# GitHub 网页 fork 两仓到你自己账号，然后：
+git clone git@github.com:<你的用户名>/bookcorpus.git && cd bookcorpus
+git remote add upstream git@github.com:godlockin/bookcorpus.git   # 跟踪主仓
+cd .. && git clone git@github.com:<你的用户名>/bookverse.git bookverse-universe
+cd bookverse-universe && git remote add upstream git@github.com:godlockin/bookverse.git
 ```
+
+**配置指向你的 fork**（config.yaml 的 corpus_root 指你的 bookcorpus 副本；universe_root 指你的 bookverse-universe/universe——这样拆书产物直接落在可提交的工作区）。
+
 需要：支持 skills 的 coding agent（ZCode / Claude Code 等）+ 本地有目标书的电子文件。
 
 ### 1. 认领（防重复拆）

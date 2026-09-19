@@ -22,7 +22,9 @@ description: 拆书流水线与个人阅读宇宙：对任意一本书（本地 
 
 **自主权契约**
 
-免确认数据域：工作区下的 `books/`、`universe/`、`mcp-reading-universe/`、`books-index.md`、`HANDOFF*.md`，以及 `~/.agents/skills/bookverse/`（skill 自身迭代，含 config.yaml 配置读写）——流水线中间产物（00-source 至 06-takeaway、book-map、signals）全部直接创建/修改，不停下询问。仍需确认：工作区之外的任何文件（用户 shell 配置等）、删除整本书目录、对外发布内容、确认点 A/B/C 的流程裁决。配套项目权限白名单见 `<workspace>/.zcode/settings.json`；若工具权限仍弹窗，请用户选"总是允许"或切 accept-edits 模式。
+免确认数据域（**三仓结构，2026-09-19 更新**）：数据仓 `corpus_root` 下的 `corpus/**`（00-source 至 06-takeaway、book-map、signals 全部直接创建/修改）、技能仓根下的 `universe/**` 与 `skill/**`（宇宙写入与 skill 自身迭代，含 config.yaml 读写）、`~/.agents/skills/bookverse/`（symlink 即技能仓）。**免确认操作类别（明示）**：目录创建与移动（mkdir/mv）、调研（WebSearch/WebFetch）、数据读取（Read/grep/find）、免确认域内的一切产物写入——这些操作**一律不停下询问**。仍需确认：免确认域之外的任何文件（用户 shell 配置等）、删除整本书目录、对外发布内容、确认点 A/B/C 的流程裁决。
+
+**权限预热纪律（2026-09-19 实战教训制度化：子 agent 因权限弹窗悬停 → 600 秒不活跃被杀，多轮批次折损）**：主 agent 派子 agent 前，确认其 prompt 涉及的所有路径与命令在会话权限白名单内（配套白名单见两仓根的 `.zcode/settings.json`，覆盖 corpus/universe/skill 三域读写与常用命令）；**白名单外的操作由主 agent 代执行，绝不派子 agent 去撞权限墙**。若运行中仍弹权限窗，请用户选「总是允许」或切 accept-edits 模式，并在事后把该路径补进 `.zcode/settings.json`（该文件不入 git，机器本地）。
 
 ## 配置（config.yaml · skill 正文零真实地址）
 

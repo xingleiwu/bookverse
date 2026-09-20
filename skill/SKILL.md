@@ -93,7 +93,7 @@ universe_root: <宇宙目录>         # 默认 <技能仓>/universe；也可指�
 ## 流水线（7 步）
 
 **Step 1 提取 + 并行调研** —— 读 references/stage1-research.md、references/taxonomy.md、references/universe.md（宇宙碰撞初查）、references/persona.md（读人格档案，`--no-persona` 时跳过）。
-**取书前置查重**：`python3 <skill目录>/scripts/book_lookup.py <书名/作者关键词>`——已处理过则显示版本与路径（重复拆解=重读仪式场景，teardown-version 递增；同名不同书用 --list 核对）。解析输入并提取全文与元数据（**合集/套装先拆成独立书目各自走完整流水线；>30 万字超长书按章级单元分卷执行后汇总 merge，分卷全程维护书内知识图谱 book-graph——强关联章不拆散、专家可实时检索跨单元引用——规范见 references/stage1-research.md §1**）→ 主题分类（主/副类型 + 权重）→ **全书测绘官**（文件模式下派 1 个子 agent 通读全文产出测绘图：逐讲摘要 + 绝对化论断全量清单 + 概念密度 + 金句表，规范见 references/experts/router.md 覆盖策略）→ 并行 4 个调研子 agent（作者谱系 / 同类书目 / 立场对话书目 / 背景争议）→ MoE 门控生成专家激活清单（规则见 references/experts/router.md）。
+**取书前置查重**：`python3 <skill目录>/scripts/book_lookup.py <书名/作者关键词>`——已处理过则显示版本与路径（重复拆解=重读仪式场景，teardown-version 递增；同名不同书用 --list 核对）。解析输入并提取全文与元数据（**视觉主导书（画册/摄影集/设计集/绘本——文字稀少）走视觉轨道：pdftoppm 提页图 + 视觉测绘官读图，规范见 references/experts/arts.md；合集/套装先拆成独立书目各自走完整流水线；>30 万字超长书按章级单元分卷执行后汇总 merge，分卷全程维护书内知识图谱 book-graph——强关联章不拆散、专家可实时检索跨单元引用——规范见 references/stage1-research.md §1**）→ 主题分类（主/副类型 + 权重）→ **全书测绘官**（文件模式下派 1 个子 agent 通读全文产出测绘图：逐讲摘要 + 绝对化论断全量清单 + 概念密度 + 金句表，规范见 references/experts/router.md 覆盖策略）→ 并行 4 个调研子 agent（作者谱系 / 同类书目 / 立场对话书目 / 背景争议）→ MoE 门控生成专家激活清单（规则见 references/experts/router.md）。
 
 ⏸ **确认点 A**：呈现分类 + 权重 + 专家清单 + 召唤预算 + 宇宙相关节点，用户可增删改，确认后继续。
 

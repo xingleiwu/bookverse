@@ -10,6 +10,7 @@
 | EPUB | `unzip -o <file> -d <tmp>` 后按 OPF spine 顺序拼接 XHTML，去标签转文本（python html.parser 或 `textutil -convert txt`） |
 | DOCX | macOS：`textutil -convert txt <file> -output -`；或 python-docx |
 | TXT/MD | 直接读 |
+| **视觉书（画册/摄影集/设计集/绘本）** | 文字层照常 pdftotext（前言/图注/访谈是重要分析对象）；**图像层**：`mkdir -p 00-source/pages && pdftoppm -jpeg -r 150 <file>.pdf 00-source/pages/p`（每页一图，150dpi 供多模态读图）；EPUB 先解包取 XHTML 内嵌图。**pages/ 版权红线同 fulltext：绝不入库**。提取后判定：全文 <3000 字或页均 <15 字 → 视觉主导轨道（规范见 experts/arts.md visual 节） |
 
 提取结果写 `corpus/<书库分类层级>/<slug>/00-source/fulltext.md`（保留章节分隔标记）。
 

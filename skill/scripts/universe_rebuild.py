@@ -465,6 +465,17 @@ def handle(req, corpus):
 
 
 def main():
+    # CLI 重建模式：universe_rebuild.py [universe_path] —— 维护 AUTO 区块（books-index/LIBRARY/index 书目表 + edges.jsonl）
+    # 无参数时保持 MCP stdin 模式
+    if len(sys.argv) > 1:
+        _UNIVERSE_ARG = Path(sys.argv[1]).expanduser()
+        if not _UNIVERSE_ARG.exists():
+            print(f"宇宙目录不存在：{_UNIVERSE_ARG}", file=sys.stderr)
+            raise SystemExit(2)
+        global UNIVERSE
+        UNIVERSE = _UNIVERSE_ARG
+        cli_rebuild()
+        return
     corpus = load_corpus()
     for raw in sys.stdin:
         raw = raw.strip()
@@ -478,6 +489,174 @@ def main():
         if resp is not None:
             sys.stdout.write(json.dumps(resp, ensure_ascii=False) + "\n")
             sys.stdout.flush()
+
+
+# ---------- CLI 重建（2026-09-19 补回：AUTO 区块维护在 MCP 化重构时丢失，按 universe.md 规范重写） ----------
+
+def _parse_related_entry(entry: str):
+    m = re.match(r"^([a-z_]+):([\w-]+)$", str(entry).strip())
+    return (m.group(1), m.group(2)) if m else (None, None)
+
+
+def _concept_slug_map():
+    m = {}
+    for f in sorted((UNIVERSE / "concepts").rglob("*.md")):
+        fm, _ = parse_frontmatter(read(f))
+        if fm and fm.get("concept"):
+            m[str(fm["concept"]).strip()] = f.stem
+            for a in (fm.get("aliases") if isinstance(fm.get("aliases"), list) else []):
+                m[str(a).strip()] = f.stem
+    return m
+
+
+def cli_rebuild():
+    cslug = _concept_slug_map()
+    old_notes = {}
+    ej = UNIVERSE / "graph" / "edges.jsonl"
+    if ej.exists():
+        for line in read(ej).splitlines():
+            line = line.strip()
+            if line:
+                try:
+                    e = json.loads(line)
+                    old_notes[(e.get("source"), e.get("relation"), e.get("target"))] = e.get("note", "")
+                except json.JSONDecodeError:
+                    pass
+
+    books = []
+    for f in sorted((UNIVERSE / "books").rglob("*.md")):
+        fm, body = parse_frontmatter(read(f))
+        if not fm or not fm.get("title"):
+            continue
+        books.append({"slug": f.stem, "fm": fm, "body": body, "path": f})
+
+    # 1) 派生边表：concepts 列表→proposes；related 列表→受控词表边；note 按 (s,r,t) 持久化
+    edges = []
+    for b in books:
+        src = f"book:{b['slug']}"
+        for name in (b["fm"].get("concepts") if isinstance(b["fm"].get("concepts"), list) else []):
+            tgt = cslug.get(str(name).strip())
+            if not tgt:
+                print(f"⚠ 边派生：书 {b['slug']} 的概念「{name}」无对应节点", file=sys.stderr)
+                continue
+            t = f"concept:{tgt}"
+            edges.append({"source": src, "relation": "proposes", "target": t,
+                          "note": old_notes.get((src, "proposes", t), "")})
+        for entry in (b["fm"].get("related") if isinstance(b["fm"].get("related"), list) else []):
+            rel, tgt = _parse_related_entry(entry)
+            if not rel or not tgt:
+                print(f"⚠ 边派生：书 {b['slug']} related 条目格式异常：{entry}", file=sys.stderr)
+                continue
+            t = tgt if tgt in {x["slug"] for x in books} else tgt  # 书级边目标用 slug
+            edges.append({"source": src, "relation": rel, "target": f"book:{t}",
+                          "note": old_notes.get((src, rel, f"book:{t}"), "")})
+    edges.sort(key=lambda e: (e["source"], e["relation"], e["target"]))
+    ej.write_text("".join(json.dumps(e, ensure_ascii=False) + "\n" for e in edges), encoding="utf-8")
+
+    # 2) index.md 书目表
+    idx = UNIVERSE / "index.md"
+    rows = []
+    for b in books:
+        n = len(b["fm"].get("concepts") or [])
+        rel = b["path"].relative_to(UNIVERSE)
+        rows.append(f"| [{b['fm']['title']}]({rel}) | {b['fm'].get('author','')} | {b['fm'].get('type','')} | {b['fm'].get('date-torn','')} | {n} |")
+    rows.sort(key=lambda r: r.split("|")[4].strip())  # 按拆书日期列
+    _replace_auto(idx, "books",
+                  "## 书目\n\n| 书 | 作者 | 类型 | 拆书日期 | 概念数 |\n|---|---|---|---|---|\n" + "\n".join(rows) + "\n")
+
+    # 3) books-index.md
+    bi = UNIVERSE / "books-index.md"
+    rows = []
+    for b in books:
+        rows.append(f"| {b['fm']['title']} | {b['fm'].get('author','')} | {b['fm'].get('type','')} | {b['fm'].get('date-torn','')} | {b['fm'].get('cost','未计量')} | ✅ |")
+    rows.sort(key=lambda r: r.split("|")[4].strip())
+    _replace_auto(bi, "books-index",
+                  "| 书 | 作者 | 类型 | 拆书日期 | 子 agent 成本 | 状态 |\n|---|---|---|---|---|---|\n" + "\n".join(rows) + "\n")
+
+    # 4) LIBRARY.md
+    _rebuild_library(books, edges)
+
+
+def _replace_auto(path: Path, block: str, content: str):
+    text = read(path)
+    pat = re.compile(rf"(<!-- AUTO:{block}:start -->\n).*?(<!-- AUTO:{block}:end -->)", re.S)
+    if not pat.search(text):
+        print(f"⚠ AUTO 区块缺失：{path.name}:{block}", file=sys.stderr)
+        return
+    path.write_text(pat.sub(lambda m: m.group(1) + content + m.group(2), text), encoding="utf-8")
+    print(f"✓ {path.name}:{block} 已重建")
+
+
+def _book_product_line(b):
+    """扫 corpus 镜像目录生成产物 ✓✗ 行与分析计数"""
+    rel = b["path"].relative_to(UNIVERSE / "books")
+    cdir = (BOOKS / rel.with_suffix(""))
+    if not cdir.exists():
+        cdir = BOOKS / "corpus" / rel.with_suffix("")
+    if not cdir.exists():
+        return "\n  - 产物：corpus 目录未找到", ""
+    have = lambda *p: cdir.joinpath(*p).exists()
+    n_analysis = len(list((cdir / "02-analysis").glob("*.md"))) if (cdir / "02-analysis").exists() else 0
+    parts = [f"分析×{n_analysis}",
+             "提取✓" if have("00-source", "fulltext.md") else "提取✗",
+             "测绘图✓" if have("01-meta", "book-map.md") else "测绘图✗",
+             "level1✓" if have("03-synthesis", "level1.md") else "level1✗",
+             "digest✓" if have("03-synthesis", "digest.md") else "digest✗",
+             "书单✓" if have("04-network", "related.md") else "书单✗",
+             "书评✓" if have("05-review", "final.md") else "书评✗"]
+    t = cdir / "06-takeaway"
+    for k, f in [("餐巾纸", "napkin.md"), ("brief", "brief.md"), ("方针", "principles.md"),
+                 ("小红书", "xhs.md"), ("朋友圈", "moments.md"), ("讲书", "talk.md"),
+                 ("评审记录", "review-log.md"), ("学习手册", "handbook.md")]:
+        parts.append(f"{k}✓" if t.exists() and (t / f).exists() else f"{k}✗")
+    ol = ""
+    m = re.search(r"## 一句话\s+(.+)", b["body"])
+    if m:
+        ol = m.group(1).strip().splitlines()[0]
+    return "\n  - 产物：" + " ".join(parts), ol
+
+
+def _rebuild_library(books, edges):
+    lib = UNIVERSE / "LIBRARY.md"
+    # 总览
+    n_concepts = len(list((UNIVERSE / "concepts").rglob("*.md")))
+    rel_count = {}
+    for e in edges:
+        rel_count[e["relation"]] = rel_count.get(e["relation"], 0) + 1
+    n_bc = sum(1 for e in edges if e["target"].startswith("concept:"))
+    n_bb = len(edges) - n_bc
+    dom_books = {}
+    for b in books:
+        dom_books.setdefault(str(b["fm"].get("domain", "未分组")), []).append(b)
+    dom_summary = " · ".join(f"{d} {len(v)} 本" for d, v in sorted(dom_books.items(), key=lambda kv: -len(kv[1])))
+    overview = (f"## 总览\n\n- 书 {len(books)} 本（{dom_summary}）；概念 {n_concepts}；边 {len(edges)}"
+                f"（书→概念 {n_bc} · 书↔书 {n_bb}）\n"
+                f"- 边类型：" + " · ".join(f"{k} {v}" for k, v in sorted(rel_count.items())) + "\n")
+    # 书目树（按 domain 分组）
+    tree = ["\n## 书目树（按主题域；产物✓✗对照当前规范默认菜单）\n"]
+    for d, bs in sorted(dom_books.items(), key=lambda kv: kv[0]):
+        tree.append(f"\n### {d}\n")
+        for b in sorted(bs, key=lambda x: str(x["fm"].get("date-torn", ""))):
+            fm = b["fm"]
+            pline, ol = _book_product_line(b)
+            tree.append(f"\n- **《{fm['title']}》** {fm.get('author','')} · {fm.get('date-torn','')} · {fm.get('type','')} · 成本 {fm.get('cost','未计量')}")
+            if ol:
+                tree.append(f"\n  - 一句话：{ol}")
+            tree.append(pline + "\n")
+            tree.append(f"  - 概念（{len(fm.get('concepts') or [])}）：{'、'.join(fm.get('concepts') or [])}")
+    # 概念域索引
+    concept_domains = {}
+    for f in sorted((UNIVERSE / "concepts").rglob("*.md")):
+        fm, _ = parse_frontmatter(read(f))
+        if not fm or not fm.get("concept"):
+            continue
+        for d in (fm.get("domains") if isinstance(fm.get("domains"), list) else [str(fm.get("domains", "未分组"))]):
+            concept_domains.setdefault(str(d), []).append(str(fm["concept"]))
+    ci = ["\n## 概念域索引（按概念自身 domains 标签，多标签概念在各组重复出现）\n"]
+    for d, names in sorted(concept_domains.items(), key=lambda kv: kv[0]):
+        ci.append(f"- **{d}**（{len(names)}）：{'、'.join(sorted(names))}")
+    tail = "\n\n待拆书单见 universe/frontier.md；跨书涌现台账见 universe/emergent.md；主题域子图见 universe/index.md。\n"
+    _replace_auto(lib, "library", overview + "".join(tree) + "".join(ci) + tail)
 
 
 if __name__ == "__main__":

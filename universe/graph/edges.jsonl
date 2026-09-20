@@ -1,96 +1,101 @@
-{"source": "book:jing-ji-jie-shi", "relation": "elaborates", "target": "concept:demand-law", "note": "公理化原创+防伪三件套 [原文·卷一 L1877-1879、卷四 L15437]"}
-{"source": "book:jing-ji-jie-shi", "relation": "elaborates", "target": "concept:transaction-cost", "note": "1969提出，广义=制度费用 [原文·卷二 L5291-5317]"}
-{"source": "book:jing-ji-jie-shi", "relation": "elaborates", "target": "concept:coase-theorem", "note": "三版本审裁v1真/v2套套逻辑/v3错 [原文·卷三 L8830-8950、卷四 L13462]"}
-{"source": "book:jing-ji-jie-shi", "relation": "elaborates", "target": "concept:price-control-shortage", "note": "1974管制理论，杀「短缺」一词 [原文·卷三 L10148-10151、L3055-3056]"}
-{"source": "book:jing-ji-jie-shi", "relation": "elaborates", "target": "concept:rent-seeking", "note": "无独立寻租框架，深水区=租值消散 [原文·卷三 L10201-10268]"}
-{"source": "book:jing-ji-jie-shi", "relation": "elaborates", "target": "concept:comparative-advantage", "note": "只陈述并推崇定律，无全称断言 [原文·卷二 L4012-4015]"}
-{"source": "book:jing-ji-jie-shi", "relation": "elaborates", "target": "concept:unintended-consequences", "note": "局限转变翻为代价转变，可检验 [原文·卷四 L15518-15535]"}
-{"source": "book:jing-ji-jie-shi", "relation": "elaborates", "target": "concept:minimum-wage-debate", "note": "合约调整机制（学徒/件工），不诉诸共识 [原文·卷四 L10699-10720]"}
-{"source": "book:jing-ji-jie-shi", "relation": "elaborates", "target": "concept:china-price-reform", "note": "包产到户=私产，合约重构读法 [原文·卷三 L12255、L8961]"}
-{"source": "book:misbehaving", "relation": "opposes", "target": "book:jing-ji-jie-shi", "note": "[原文·ch27 马克杯打科斯定理外推 L6691；张五常套套逻辑免疫；实证层]"}
-{"source": "book:misbehaving", "relation": "opposes", "target": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "note": "[推断·薛书12概念零行为经济学+科斯定律正中ch27；双层]"}
-{"source": "book:misbehaving", "relation": "cross_validate", "target": "book:thinking-fast-slow", "note": "[原文·卡尼曼148次；planner-doer L3209↔双系统互映射]"}
-{"source": "book:misbehaving", "relation": "similar_to", "target": "book:keyi-lianxi", "note": "[推断·同上游西蒙三支流平行零互引]"}
-{"source": "book:misbehaving", "relation": "proposes", "target": "concept:xinli-zhanghu", "note": "[原文·L1896 自证命名]"}
-{"source": "book:misbehaving", "relation": "proposes", "target": "concept:bingfu-xiaoying", "note": "[原文·ch17/ch27 KKT 1990 马克杯]"}
-{"source": "book:misbehaving", "relation": "proposes", "target": "concept:zhutui", "note": "[原文·第8部分 与桑斯坦]"}
-{"source": "book:misbehaving", "relation": "proposes", "target": "concept:transaction-utility", "note": "[原文·马克杯链] 交易效用=参考价−支付价，「划算感」为独立效用项"}
-{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "influenced_by", "target": "book:jing-ji-jie-shi", "note": "[推断·张→薛主脉：需求定律/交易费用/科斯等学术源头为张]"}
-{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:opportunity-cost", "note": "放弃的最大代价；沉没成本不是成本 [原文·第013/083讲]"}
-{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:transaction-cost", "note": "凡一人社会里不存在的成本 [原文·第023讲]"}
-{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:coase-theorem", "note": "谁用得好就归谁+零交易费用定理 [原文·第021/023讲]"}
-{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:demand-law", "note": "准先验真理，反例免疫策略 [原文·第028讲]"}
-{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:price-control-shortage", "note": "价抑→排队/黄牛/行贿，价值耗散 [原文·第037-039讲]"}
-{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:rent-seeking", "note": "争取非生产性特权，图洛克1967 [原文·第018-019讲]"}
-{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:lemons-market", "note": "信息不对称致市场崩溃，讲足自发解法 [原文·第079-090讲]"}
-{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:comparative-advantage", "note": "自己跟自己比，分工双赢 [原文·第071讲]"}
-{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:unintended-consequences", "note": "看结果不看愿望，政策二阶反应 [原文·前言/第004讲]"}
-{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:minimum-wage-debate", "note": "失业论「共识」过时，Card-Krueger后分化 [原文·第097讲]"}
-{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:china-price-reform", "note": "管住货币再放开价格次序论 [时空审计·historical-audit.md]"}
-{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:great-depression", "note": "经济周期研究是大萧条后议程 [时空审计·historical-audit.md]"}
-{"source": "book:da-nao-xi-huan-zhe-yang-xue", "relation": "similar_to", "target": "book:scarcity", "note": "[推断·带宽同名异物：状态税vs容量约束，同一隐喻各取一半]"}
-{"source": "book:da-nao-xi-huan-zhe-yang-xue", "relation": "similar_to", "target": "book:keyi-lianxi", "note": "[推断·专业人士转译同构，失真层不同；折旧表对比]"}
-{"source": "book:da-nao-xi-huan-zhe-yang-xue", "relation": "proposes", "target": "concept:internal-model", "note": "学习=为知识搭内部模型，五要素为建模流程 [原文·L837起]"}
-{"source": "book:da-nao-xi-huan-zhe-yang-xue", "relation": "elaborates", "target": "concept:bandwidth", "note": "同名异物：认知资源=硬件静态容量约束 [原文·L114-124, L1191]"}
-{"source": "book:da-nao-xi-huan-zhe-yang-xue", "relation": "elaborates", "target": "concept:replication-crisis", "note": "变异携带者：学习金字塔L532/哈佛调查L1242 [redteam+domain]"}
-{"source": "book:ren-zhi-jue-xing", "relation": "cross_validate", "target": "book:scarcity", "note": "[推断·蔗农研究双向转述忠实，2024元分析小效应双向警示]"}
-{"source": "book:ren-zhi-jue-xing", "relation": "adapts", "target": "book:scarcity", "note": "[推断·adapts首例：带宽政策论证转个人修行处方（五帖药）]"}
-{"source": "book:ren-zhi-jue-xing", "relation": "influenced_by", "target": "book:keyi-lianxi", "note": "[原文·ren-zhi-jue-xing 引用 21 次；context.md 传播变形对照]"}
-{"source": "book:ren-zhi-jue-xing", "relation": "proposes", "target": "concept:metacognition", "note": "元认知=觉察+自控，通俗重定义 [原文·L585/L656/L602]"}
-{"source": "book:ren-zhi-jue-xing", "relation": "proposes", "target": "concept:edge-of-comfort-zone", "note": "舒适区-拉伸区-困难区，中文化重命名 [原文·L279/L498]"}
-{"source": "book:ren-zhi-jue-xing", "relation": "proposes", "target": "concept:resonant-learning", "note": "只取最触动一点去实践改变 [原文·L502/L1279/L1281]"}
-{"source": "book:ren-zhi-jue-xing", "relation": "proposes", "target": "concept:cognition-driven", "note": "认知清晰替代意志力支撑 [原文·L42/L2324]"}
-{"source": "book:ren-zhi-jue-xing", "relation": "proposes", "target": "concept:triune-brain", "note": "本能/情绪/理智三分，全书解释底座 [原文·L89-L168]"}
-{"source": "book:ren-zhi-jue-xing", "relation": "elaborates", "target": "concept:bandwidth", "note": "定义照搬，政策概念改个人处方 [原文·L1961-1965, L1975-2031]"}
-{"source": "book:scarcity", "relation": "critiques", "target": "book:jing-ji-jie-shi", "note": "[推断·带宽可收编为张约束清单新条目，故critiques非opposes]"}
-{"source": "book:scarcity", "relation": "influenced_by", "target": "book:thinking-fast-slow", "note": "[原文·tfs L1337 直接引用；沙菲尔师承特沃斯基]"}
-{"source": "book:scarcity", "relation": "influenced_by", "target": "book:misbehaving", "note": "[原文·misbehaving L4868 RSF嫡系+L2081脚注引用]"}
-{"source": "book:scarcity", "relation": "proposes", "target": "concept:bandwidth", "note": "稀缺降低带宽容量，商场/蔗农实证 [原文·OCR·L944-950]"}
-{"source": "book:scarcity", "relation": "proposes", "target": "concept:tunneling", "note": "视野因稀缺变窄，与专注红利同源 [原文·OCR·L1397-1399]"}
-{"source": "book:scarcity", "relation": "proposes", "target": "concept:slack", "note": "无稀缺心态的产物，吸收错误的保险 [原文·OCR·L2859-2861]"}
-{"source": "book:scarcity", "relation": "proposes", "target": "concept:scarcity-trap", "note": "自增强回路；小贩免债一年落回 [原文·OCR·L4628-4680]"}
-{"source": "book:scarcity", "relation": "elaborates", "target": "concept:opportunity-cost", "note": "穷人是好会计，三方共鸣 [原文·OCR·L3395-3444、L3755-3793]"}
-{"source": "book:scarcity", "relation": "elaborates", "target": "concept:unintended-consequences", "note": "管窥=事与愿违微观机制版 [原文·OCR·L5681-5682]"}
-{"source": "book:scarcity", "relation": "proposes", "target": "concept:replication-crisis", "note": "受影响者：带宽税量级被2024元分析折价 [时空审计+redteam]"}
-{"source": "book:thinking-fast-slow", "relation": "opposes", "target": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "note": "[推断·理性人假设层对撞；intellectual-map 裁决（张五常套套逻辑部分免疫）]"}
-{"source": "book:thinking-fast-slow", "relation": "cross_validate", "target": "book:keyi-lianxi", "note": "[推断·同上游西蒙+克莱因双判据互证；intellectual-map]"}
-{"source": "book:thinking-fast-slow", "relation": "proposes", "target": "concept:dual-system", "note": "[原文·第1-2章、结语「虚拟人物」]"}
-{"source": "book:thinking-fast-slow", "relation": "proposes", "target": "concept:prospect-theory", "note": "[原文·第25-29章 诺贝尔级闭环]"}
-{"source": "book:thinking-fast-slow", "relation": "proposes", "target": "concept:loss-aversion", "note": "[原文·第26-27章 λ≈1.955 契合]"}
-{"source": "book:thinking-fast-slow", "relation": "proposes", "target": "concept:peak-end-rule", "note": "[原文·第35-36章 冰手实验]"}
-{"source": "book:keyi-lianxi", "relation": "influenced_by_reverse", "target": "book:ren-zhi-jue-xing", "note": "[推断·认知觉醒引本书21次却不引「心理表征」——理论债边，拆后已同审刻意练习解释力争议]"}
-{"source": "book:keyi-lianxi", "relation": "similar_to", "target": "book:da-nao-xi-huan-zhe-yang-xue", "note": "[推断·学习科学同构对：心理表征×内部模型互指不合并（Dream-002 裁决）]"}
-{"source": "book:keyi-lianxi", "relation": "proposes", "target": "concept:xinli-biaozheng", "note": "[原文·第3章 LTWM 忠实改写，discipline 零失真]"}
-{"source": "book:keyi-lianxi", "relation": "proposes", "target": "concept:deliberate-practice", "note": "[原文·第1/4章 三级练习；opposition 85% 裁决]"}
-{"source": "book:keyi-lianxi", "relation": "proposes", "target": "concept:ten-thousand-hours", "note": "[原文·第4章 均值非门槛辟谣；context 时间线]"}
-{"source": "book:keyi-lianxi", "relation": "elaborates", "target": "concept:edge-of-comfort-zone", "note": "[原文·L279] # 舒适区边缘"}
-{"source": "book:lilun-fazue-miwu", "relation": "opposes", "target": "book:zhengyi-nvshen-buzhengyan", "note": "[推断·镜像对手：程序内在价值vs效果计算，分域休战；两书 argument.md 对撞节]"}
-{"source": "book:lilun-fazue-miwu", "relation": "cross_validate", "target": "book:jing-ji-jie-shi", "note": "[推断·同上游科斯两支流：威慑博弈vs需求定律互不引证；intellectual-map.md 裁决]"}
-{"source": "book:lilun-fazue-miwu", "relation": "proposes", "target": "concept:ionian-fallacy", "note": "[原文·第三章 帕尔默案原则解释=事后合理化]"}
-{"source": "book:lilun-fazue-miwu", "relation": "proposes", "target": "concept:xiuci-chengben", "note": "[原文·第一章 邱兴华案修辞的利益内核]"}
-{"source": "book:lilun-fazue-miwu", "relation": "proposes", "target": "concept:bianji-weishe", "note": "[原文·第六章 许霆案 Stigler 1970]"}
-{"source": "book:lilun-fazue-miwu", "relation": "proposes", "target": "concept:jieshi-jiaxiang", "note": "[原文·第三章 判决实质=法律外部成本权衡]"}
-{"source": "book:zhengyi-nvshen-buzhengyan", "relation": "cross_validate", "target": "book:evil-in-modern-thought", "note": "[推断·程序正义×神义论检测器结构同构：评估对象与实现机制分离；涌现裁决 2026-09-17 v8]"}
-{"source": "book:zhengyi-nvshen-buzhengyan", "relation": "proposes", "target": "concept:chengxu-zhengyi", "note": "[原文·L604-669 程序正义绝对不可放弃；argument.md 链1]"}
-{"source": "book:zhengyi-nvshen-buzhengyan", "relation": "proposes", "target": "concept:falv-shishi", "note": "[原文·L759-781 法律事实＝经质证未排除的证据]"}
-{"source": "book:zhengyi-nvshen-buzhengyan", "relation": "proposes", "target": "concept:jiaohun-strategy", "note": "[原文·L1709-1711 敲桌子把事情搅浑]"}
-{"source": "book:zhengyi-nvshen-buzhengyan", "relation": "proposes", "target": "concept:bu-he-fa-wei-fa-fan-zui", "note": "[原文·L1383-1699 不合法<违法<犯罪三层]"}
-{"source": "book:zhengyi-nvshen-buzhengyan", "relation": "proposes", "target": "concept:zhuan-ye-vs-zhijue", "note": "[推断·argument.md §3.2 全书最强前提未经论证]"}
-{"source": "book:zhengyi-nvshen-buzhengyan", "relation": "proposes", "target": "concept:zhongbao-pufa", "note": "[推断·高赞筛选焊死时效；redteam.md 编辑层缺位]"}
-{"source": "book:zhengyi-nvshen-buzhengyan", "relation": "proposes", "target": "concept:minfa-dian-shidai", "note": "[原文·成书 2016-01；historical-audit.md 时间轴 30 条]"}
-{"source": "book:evil-in-modern-thought", "relation": "cross_validate", "target": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "note": "[原文·L9490-9491] 神义论检测器×薛「事与愿违」"}
-{"source": "book:evil-in-modern-thought", "relation": "cross_validate", "target": "book:jing-ji-jie-shi", "note": "[原文·L3296区] 安慰与检验互斥律×张可检验性判准"}
-{"source": "book:evil-in-modern-thought", "relation": "proposes", "target": "concept:theodicy", "note": "现代哲学史隐藏骨架 [原文·L779-780、L9557-9558]"}
-{"source": "book:evil-in-modern-thought", "relation": "proposes", "target": "concept:natural-moral-evil", "note": "区分是历史变量，里斯本使其显题化 [原文·L372-374、L10199-10201]"}
-{"source": "book:evil-in-modern-thought", "relation": "proposes", "target": "concept:banality-of-evil", "note": "恶源于无思；后记依施汤内特修正 [原文·L9071-9072、L9944-9953]"}
-{"source": "book:evil-in-modern-thought", "relation": "proposes", "target": "concept:cunning-of-reason", "note": "改进版神正论、世俗化天意 [原文·L9490-9491、L7960-7968]"}
-{"source": "book:evil-in-modern-thought", "relation": "proposes", "target": "concept:hope-without-theodicy", "note": "非神义论的希望=康德式实践预设 [原文·L8701、L9651-9652]"}
+{"source": "book:being-logical", "relation": "proposes", "target": "concept:axioms-self-evidence", "note": "四原理宣告不可证也不需证，担保=直觉点头 [原文·L674-685]"}
+{"source": "book:being-logical", "relation": "proposes", "target": "concept:dual-check", "note": "评定四步+真假参半警句，全书技术抽查零错漏区 [原文·L1617-1639]"}
+{"source": "book:being-logical", "relation": "proposes", "target": "concept:fallacy-list-pedagogy", "note": "28 清单盾不是矛+立场化条目 [原文·L1862-1870、L2141-2301]"}
+{"source": "book:being-logical", "relation": "proposes", "target": "concept:normative-reasoning", "note": "纯规范零实验接口，坐标=规范性直觉主义 [推断·digest 坐标节]"}
+{"source": "book:being-logical", "relation": "similar_to", "target": "book:thinking-fast-slow", "note": "描述/规范两极：规范手册公理担保=描述研究证明不可靠的系统1 [推断·being-logical argument §5.1]"}
 {"source": "book:da-ming-wangchao-1566", "relation": "cross_validate", "target": "book:evil-in-modern-thought", "note": "[原文·L32010/32139] 长江黄河论×神义论——统治者的「不得已」辩护结构（统治神学检测器，v13）"}
-{"source": "book:da-ming-wangchao-1566", "relation": "cross_validate", "target": "book:zhengyi-nvshen-buzhengyan", "note": "[原文·L20076] 供词政治×法律事实——口供作为制度需要的成品（焚供词·ch24 vs 刑事司法口供中心主义）"}
 {"source": "book:da-ming-wangchao-1566", "relation": "cross_validate", "target": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "note": "[原文·L424-428 × 薛L353-354] 改稻为桑的伪必须×事与愿违——「别无选择」由死线自造（v13）"}
-{"source": "book:da-ming-wangchao-1566", "relation": "proposes", "target": "concept:wei-bixu", "note": "[原文·L1526-1527 郑泌昌自认产能不可达；redteam#1]"}
-{"source": "book:da-ming-wangchao-1566", "relation": "proposes", "target": "concept:tizui-lian", "note": "[原文·L22577-22591 八分两分供认+L10668-10674 绝命信；characters.md 替罪链五级谱系]"}
-{"source": "book:da-ming-wangchao-1566", "relation": "proposes", "target": "concept:shanyi-de-qiangzhi", "note": "[原文·L9828-9832 借粮改桑赈粮捆绑；redteam#4]"}
+{"source": "book:da-ming-wangchao-1566", "relation": "cross_validate", "target": "book:zhengyi-nvshen-buzhengyan", "note": "[原文·L20076] 供词政治×法律事实——口供作为制度需要的成品（焚供词·ch24 vs 刑事司法口供中心主义）"}
 {"source": "book:da-ming-wangchao-1566", "relation": "proposes", "target": "concept:changjiang-huanghe-lun", "note": "[原文·L32010-32020 长江黄河论]"}
 {"source": "book:da-ming-wangchao-1566", "relation": "proposes", "target": "concept:gongci-zhengzhi", "note": "[原文·L19109-19110 私印直递+L20076-20080 焚未拆封供词]"}
 {"source": "book:da-ming-wangchao-1566", "relation": "proposes", "target": "concept:qiwu-shengming-huxian", "note": "[原文·L169→L27808-27809 铜磬死亡弧线；themes.md 意象表]"}
+{"source": "book:da-ming-wangchao-1566", "relation": "proposes", "target": "concept:shanyi-de-qiangzhi", "note": "[原文·L9828-9832 借粮改桑赈粮捆绑；redteam#4]"}
+{"source": "book:da-ming-wangchao-1566", "relation": "proposes", "target": "concept:tizui-lian", "note": "[原文·L22577-22591 八分两分供认+L10668-10674 绝命信；characters.md 替罪链五级谱系]"}
+{"source": "book:da-ming-wangchao-1566", "relation": "proposes", "target": "concept:wei-bixu", "note": "[原文·L1526-1527 郑泌昌自认产能不可达；redteam#1]"}
+{"source": "book:da-nao-xi-huan-zhe-yang-xue", "relation": "proposes", "target": "concept:bandwidth", "note": ""}
+{"source": "book:da-nao-xi-huan-zhe-yang-xue", "relation": "proposes", "target": "concept:internal-model", "note": "学习=为知识搭内部模型，五要素为建模流程 [原文·L837起]"}
+{"source": "book:da-nao-xi-huan-zhe-yang-xue", "relation": "proposes", "target": "concept:replication-crisis", "note": ""}
+{"source": "book:da-nao-xi-huan-zhe-yang-xue", "relation": "similar_to", "target": "book:keyi-lianxi", "note": "[推断·专业人士转译同构，失真层不同；折旧表对比]"}
+{"source": "book:da-nao-xi-huan-zhe-yang-xue", "relation": "similar_to", "target": "book:scarcity", "note": "[推断·带宽同名异物：状态税vs容量约束，同一隐喻各取一半]"}
+{"source": "book:evil-in-modern-thought", "relation": "cross_validate", "target": "book:jing-ji-jie-shi", "note": "[原文·L3296区] 安慰与检验互斥律×张可检验性判准"}
+{"source": "book:evil-in-modern-thought", "relation": "cross_validate", "target": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "note": "[原文·L9490-9491] 神义论检测器×薛「事与愿违」"}
+{"source": "book:evil-in-modern-thought", "relation": "proposes", "target": "concept:banality-of-evil", "note": "恶源于无思；后记依施汤内特修正 [原文·L9071-9072、L9944-9953]"}
+{"source": "book:evil-in-modern-thought", "relation": "proposes", "target": "concept:cunning-of-reason", "note": "改进版神正论、世俗化天意 [原文·L9490-9491、L7960-7968]"}
+{"source": "book:evil-in-modern-thought", "relation": "proposes", "target": "concept:hope-without-theodicy", "note": "非神义论的希望=康德式实践预设 [原文·L8701、L9651-9652]"}
+{"source": "book:evil-in-modern-thought", "relation": "proposes", "target": "concept:natural-moral-evil", "note": "区分是历史变量，里斯本使其显题化 [原文·L372-374、L10199-10201]"}
+{"source": "book:evil-in-modern-thought", "relation": "proposes", "target": "concept:theodicy", "note": "现代哲学史隐藏骨架 [原文·L779-780、L9557-9558]"}
+{"source": "book:jing-ji-jie-shi", "relation": "proposes", "target": "concept:china-price-reform", "note": ""}
+{"source": "book:jing-ji-jie-shi", "relation": "proposes", "target": "concept:coase-theorem", "note": ""}
+{"source": "book:jing-ji-jie-shi", "relation": "proposes", "target": "concept:comparative-advantage", "note": ""}
+{"source": "book:jing-ji-jie-shi", "relation": "proposes", "target": "concept:demand-law", "note": ""}
+{"source": "book:jing-ji-jie-shi", "relation": "proposes", "target": "concept:minimum-wage-debate", "note": ""}
+{"source": "book:jing-ji-jie-shi", "relation": "proposes", "target": "concept:price-control-shortage", "note": ""}
+{"source": "book:jing-ji-jie-shi", "relation": "proposes", "target": "concept:rent-seeking", "note": ""}
+{"source": "book:jing-ji-jie-shi", "relation": "proposes", "target": "concept:transaction-cost", "note": ""}
+{"source": "book:jing-ji-jie-shi", "relation": "proposes", "target": "concept:unintended-consequences", "note": ""}
+{"source": "book:keyi-lianxi", "relation": "influenced_by_reverse", "target": "book:ren-zhi-jue-xing", "note": "[推断·认知觉醒引本书21次却不引「心理表征」——理论债边，拆后已同审刻意练习解释力争议]"}
+{"source": "book:keyi-lianxi", "relation": "proposes", "target": "concept:deliberate-practice", "note": "[原文·第1/4章 三级练习；opposition 85% 裁决]"}
+{"source": "book:keyi-lianxi", "relation": "proposes", "target": "concept:edge-of-comfort-zone", "note": ""}
+{"source": "book:keyi-lianxi", "relation": "proposes", "target": "concept:ten-thousand-hours", "note": "[原文·第4章 均值非门槛辟谣；context 时间线]"}
+{"source": "book:keyi-lianxi", "relation": "proposes", "target": "concept:xinli-biaozheng", "note": "[原文·第3章 LTWM 忠实改写，discipline 零失真]"}
+{"source": "book:keyi-lianxi", "relation": "similar_to", "target": "book:da-nao-xi-huan-zhe-yang-xue", "note": "[推断·学习科学同构对：心理表征×内部模型互指不合并（Dream-002 裁决）]"}
+{"source": "book:lilun-fazue-miwu", "relation": "cross_validate", "target": "book:jing-ji-jie-shi", "note": "[推断·同上游科斯两支流：威慑博弈vs需求定律互不引证；intellectual-map.md 裁决]"}
+{"source": "book:lilun-fazue-miwu", "relation": "opposes", "target": "book:zhengyi-nvshen-buzhengyan", "note": "[推断·镜像对手：程序内在价值vs效果计算，分域休战；两书 argument.md 对撞节]"}
+{"source": "book:lilun-fazue-miwu", "relation": "proposes", "target": "concept:bianji-weishe", "note": "[原文·第六章 许霆案 Stigler 1970]"}
+{"source": "book:lilun-fazue-miwu", "relation": "proposes", "target": "concept:ionian-fallacy", "note": "[原文·第三章 帕尔默案原则解释=事后合理化]"}
+{"source": "book:lilun-fazue-miwu", "relation": "proposes", "target": "concept:jieshi-jiaxiang", "note": "[原文·第三章 判决实质=法律外部成本权衡]"}
+{"source": "book:lilun-fazue-miwu", "relation": "proposes", "target": "concept:xiuci-chengben", "note": "[原文·第一章 邱兴华案修辞的利益内核]"}
+{"source": "book:misbehaving", "relation": "cross_validate", "target": "book:thinking-fast-slow", "note": "[原文·卡尼曼148次；planner-doer L3209↔双系统互映射]"}
+{"source": "book:misbehaving", "relation": "opposes", "target": "book:jing-ji-jie-shi", "note": "[原文·ch27 马克杯打科斯定理外推 L6691；张五常套套逻辑免疫；实证层]"}
+{"source": "book:misbehaving", "relation": "opposes", "target": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "note": "[推断·薛书12概念零行为经济学+科斯定律正中ch27；双层]"}
+{"source": "book:misbehaving", "relation": "proposes", "target": "concept:bingfu-xiaoying", "note": "[原文·ch17/ch27 KKT 1990 马克杯]"}
+{"source": "book:misbehaving", "relation": "proposes", "target": "concept:transaction-utility", "note": "[原文·马克杯链] 交易效用=参考价−支付价，「划算感」为独立效用项"}
+{"source": "book:misbehaving", "relation": "proposes", "target": "concept:xinli-zhanghu", "note": "[原文·L1896 自证命名]"}
+{"source": "book:misbehaving", "relation": "proposes", "target": "concept:zhutui", "note": "[原文·第8部分 与桑斯坦]"}
+{"source": "book:misbehaving", "relation": "similar_to", "target": "book:keyi-lianxi", "note": "[推断·同上游西蒙三支流平行零互引]"}
+{"source": "book:ren-zhi-jue-xing", "relation": "adapts", "target": "book:scarcity", "note": "[推断·adapts首例：带宽政策论证转个人修行处方（五帖药）]"}
+{"source": "book:ren-zhi-jue-xing", "relation": "cross_validate", "target": "book:scarcity", "note": "[推断·蔗农研究双向转述忠实，2024元分析小效应双向警示]"}
+{"source": "book:ren-zhi-jue-xing", "relation": "influenced_by", "target": "book:keyi-lianxi", "note": "[原文·ren-zhi-jue-xing 引用 21 次；context.md 传播变形对照]"}
+{"source": "book:ren-zhi-jue-xing", "relation": "proposes", "target": "concept:bandwidth", "note": ""}
+{"source": "book:ren-zhi-jue-xing", "relation": "proposes", "target": "concept:cognition-driven", "note": "认知清晰替代意志力支撑 [原文·L42/L2324]"}
+{"source": "book:ren-zhi-jue-xing", "relation": "proposes", "target": "concept:edge-of-comfort-zone", "note": "舒适区-拉伸区-困难区，中文化重命名 [原文·L279/L498]"}
+{"source": "book:ren-zhi-jue-xing", "relation": "proposes", "target": "concept:metacognition", "note": "元认知=觉察+自控，通俗重定义 [原文·L585/L656/L602]"}
+{"source": "book:ren-zhi-jue-xing", "relation": "proposes", "target": "concept:resonant-learning", "note": "只取最触动一点去实践改变 [原文·L502/L1279/L1281]"}
+{"source": "book:ren-zhi-jue-xing", "relation": "proposes", "target": "concept:triune-brain", "note": "本能/情绪/理智三分，全书解释底座 [原文·L89-L168]"}
+{"source": "book:scarcity", "relation": "critiques", "target": "book:jing-ji-jie-shi", "note": "[推断·带宽可收编为张约束清单新条目，故critiques非opposes]"}
+{"source": "book:scarcity", "relation": "influenced_by", "target": "book:misbehaving", "note": "[原文·misbehaving L4868 RSF嫡系+L2081脚注引用]"}
+{"source": "book:scarcity", "relation": "influenced_by", "target": "book:thinking-fast-slow", "note": "[原文·tfs L1337 直接引用；沙菲尔师承特沃斯基]"}
+{"source": "book:scarcity", "relation": "proposes", "target": "concept:bandwidth", "note": "稀缺降低带宽容量，商场/蔗农实证 [原文·OCR·L944-950]"}
+{"source": "book:scarcity", "relation": "proposes", "target": "concept:opportunity-cost", "note": ""}
+{"source": "book:scarcity", "relation": "proposes", "target": "concept:replication-crisis", "note": "受影响者：带宽税量级被2024元分析折价 [时空审计+redteam]"}
+{"source": "book:scarcity", "relation": "proposes", "target": "concept:scarcity-trap", "note": "自增强回路；小贩免债一年落回 [原文·OCR·L4628-4680]"}
+{"source": "book:scarcity", "relation": "proposes", "target": "concept:slack", "note": "无稀缺心态的产物，吸收错误的保险 [原文·OCR·L2859-2861]"}
+{"source": "book:scarcity", "relation": "proposes", "target": "concept:tunneling", "note": "视野因稀缺变窄，与专注红利同源 [原文·OCR·L1397-1399]"}
+{"source": "book:scarcity", "relation": "proposes", "target": "concept:unintended-consequences", "note": ""}
+{"source": "book:thinking-fast-slow", "relation": "cross_validate", "target": "book:keyi-lianxi", "note": "[推断·同上游西蒙+克莱因双判据互证；intellectual-map]"}
+{"source": "book:thinking-fast-slow", "relation": "opposes", "target": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "note": "[推断·理性人假设层对撞；intellectual-map 裁决（张五常套套逻辑部分免疫）]"}
+{"source": "book:thinking-fast-slow", "relation": "proposes", "target": "concept:dual-system", "note": "[原文·第1-2章、结语「虚拟人物」]"}
+{"source": "book:thinking-fast-slow", "relation": "proposes", "target": "concept:loss-aversion", "note": "[原文·第26-27章 λ≈1.955 契合]"}
+{"source": "book:thinking-fast-slow", "relation": "proposes", "target": "concept:peak-end-rule", "note": "[原文·第35-36章 冰手实验]"}
+{"source": "book:thinking-fast-slow", "relation": "proposes", "target": "concept:prospect-theory", "note": "[原文·第25-29章 诺贝尔级闭环]"}
+{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "influenced_by", "target": "book:jing-ji-jie-shi", "note": "[推断·张→薛主脉：需求定律/交易费用/科斯等学术源头为张]"}
+{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:china-price-reform", "note": "管住货币再放开价格次序论 [时空审计·historical-audit.md]"}
+{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:coase-theorem", "note": "谁用得好就归谁+零交易费用定理 [原文·第021/023讲]"}
+{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:comparative-advantage", "note": "自己跟自己比，分工双赢 [原文·第071讲]"}
+{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:demand-law", "note": "准先验真理，反例免疫策略 [原文·第028讲]"}
+{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:great-depression", "note": "经济周期研究是大萧条后议程 [时空审计·historical-audit.md]"}
+{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:lemons-market", "note": "信息不对称致市场崩溃，讲足自发解法 [原文·第079-090讲]"}
+{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:minimum-wage-debate", "note": "失业论「共识」过时，Card-Krueger后分化 [原文·第097讲]"}
+{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:opportunity-cost", "note": "放弃的最大代价；沉没成本不是成本 [原文·第013/083讲]"}
+{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:price-control-shortage", "note": "价抑→排队/黄牛/行贿，价值耗散 [原文·第037-039讲]"}
+{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:rent-seeking", "note": "争取非生产性特权，图洛克1967 [原文·第018-019讲]"}
+{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:transaction-cost", "note": "凡一人社会里不存在的成本 [原文·第023讲]"}
+{"source": "book:xue-zhao-feng-jing-ji-xue-jiang-yi", "relation": "proposes", "target": "concept:unintended-consequences", "note": "看结果不看愿望，政策二阶反应 [原文·前言/第004讲]"}
+{"source": "book:zhengyi-nvshen-buzhengyan", "relation": "cross_validate", "target": "book:evil-in-modern-thought", "note": "[推断·程序正义×神义论检测器结构同构：评估对象与实现机制分离；涌现裁决 2026-09-17 v8]"}
+{"source": "book:zhengyi-nvshen-buzhengyan", "relation": "proposes", "target": "concept:bu-he-fa-wei-fa-fan-zui", "note": "[原文·L1383-1699 不合法<违法<犯罪三层]"}
+{"source": "book:zhengyi-nvshen-buzhengyan", "relation": "proposes", "target": "concept:chengxu-zhengyi", "note": "[原文·L604-669 程序正义绝对不可放弃；argument.md 链1]"}
+{"source": "book:zhengyi-nvshen-buzhengyan", "relation": "proposes", "target": "concept:falv-shishi", "note": "[原文·L759-781 法律事实＝经质证未排除的证据]"}
+{"source": "book:zhengyi-nvshen-buzhengyan", "relation": "proposes", "target": "concept:jiaohun-strategy", "note": "[原文·L1709-1711 敲桌子把事情搅浑]"}
+{"source": "book:zhengyi-nvshen-buzhengyan", "relation": "proposes", "target": "concept:minfa-dian-shidai", "note": "[原文·成书 2016-01；historical-audit.md 时间轴 30 条]"}
+{"source": "book:zhengyi-nvshen-buzhengyan", "relation": "proposes", "target": "concept:zhongbao-pufa", "note": "[推断·高赞筛选焊死时效；redteam.md 编辑层缺位]"}
+{"source": "book:zhengyi-nvshen-buzhengyan", "relation": "proposes", "target": "concept:zhuan-ye-vs-zhijue", "note": "[推断·argument.md §3.2 全书最强前提未经论证]"}

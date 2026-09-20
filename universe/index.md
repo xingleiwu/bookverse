@@ -9,19 +9,19 @@
 
 | 书 | 作者 | 类型 | 拆书日期 | 概念数 |
 |---|---|---|---|---|
-| [经济解释（四卷本）](books/jing-ji-jie-shi.md) | 张五常 | ideas 0.6 + knowledge 0.25 + narrative 0.15 (经济学理论论著) | 2026-09-16 | 9 |
-| [「错误」的行为](books/misbehaving.md) | 理查德·塞勒 | ideas 0.75 + narrative 0.25 (行为经济学形成史·编年战史) | 2026-09-17 | 4 |
-| [薛兆丰经济学讲义](books/xue-zhao-feng-jing-ji-xue-jiang-yi.md) | 薛兆丰 | knowledge 0.55 + ideas 0.45 (通俗经济学讲义) | 2026-09-15 | 12 |
-| [大脑喜欢这样学](books/da-nao-xi-huan-zhe-yang-xue.md) | 黄翔 | knowledge 0.6 + ideas 0.4 (脑科学科普×学习方法论) | 2026-09-16 | 3 |
-| [认知觉醒：开启自我改变的原动力](books/ren-zhi-jue-xing.md) | 周岭 | knowledge 0.6 + ideas 0.4 (自助成长方法论·转述集成型工具书) | 2026-09-16 | 6 |
-| [稀缺：我们是如何陷入贫穷与忙碌的](books/scarcity.md) | 塞德希尔·穆来纳森 & 埃尔德·沙菲尔 | ideas 0.75 + knowledge 0.25 (行为科学科普论著) | 2026-09-16 | 7 |
-| [思考，快与慢](books/thinking-fast-slow.md) | 丹尼尔·卡尼曼 | ideas 0.7 + knowledge 0.3 (判断与决策理论综述·行为科学集成) | 2026-09-17 | 4 |
-| [刻意练习](books/keyi-lianxi.md) | 安德斯·艾利克森 & 罗伯特·普尔 | knowledge 0.8 + ideas 0.2 (学习方法论·专长研究转译) | 2026-09-17 | 4 |
-| [理论法学的迷雾](books/lilun-fazue-miwu.md) | 桑本谦 | ideas 0.85 + knowledge 0.15 (社科法学/法律经济学论战集) | 2026-09-17 | 4 |
-| [正义女神不睁眼](books/zhengyi-nvshen-buzhengyan.md) | 知乎 编（37 位从业者） | knowledge 0.7 + ideas 0.3 (法律通识问答集·众包普法) | 2026-09-17 | 7 |
-| [现代思想中的恶](books/evil-in-modern-thought.md) | 苏珊·奈曼（Susan Neiman） | ideas (哲学思想史) | 2026-09-16 | 5 |
-| [大明王朝1566](books/da-ming-wangchao-1566.md) | 刘和平 | fiction 0.9 + ideas 0.1 (历史政治小说·宇宙首个 fiction) | 2026-09-18 | 6 |
-
+| [薛兆丰经济学讲义](books/03_经济与投资/经济理论/xue-zhao-feng-jing-ji-xue-jiang-yi.md) | 薛兆丰 | knowledge 0.55 + ideas 0.45 (通俗经济学讲义) | 2026-09-15 | 12 |
+| [经济解释（四卷本）](books/03_经济与投资/经济理论/jing-ji-jie-shi.md) | 张五常 | ideas 0.6 + knowledge 0.25 + narrative 0.15 (经济学理论论著) | 2026-09-16 | 9 |
+| [大脑喜欢这样学](books/04_心理与个人成长/心理学/da-nao-xi-huan-zhe-yang-xue.md) | 黄翔 | knowledge 0.6 + ideas 0.4 (脑科学科普×学习方法论) | 2026-09-16 | 3 |
+| [认知觉醒：开启自我改变的原动力](books/04_心理与个人成长/心理学/ren-zhi-jue-xing.md) | 周岭 | knowledge 0.6 + ideas 0.4 (自助成长方法论·转述集成型工具书) | 2026-09-16 | 6 |
+| [稀缺：我们是如何陷入贫穷与忙碌的](books/04_心理与个人成长/心理学/scarcity.md) | 塞德希尔·穆来纳森 & 埃尔德·沙菲尔 | ideas 0.75 + knowledge 0.25 (行为科学科普论著) | 2026-09-16 | 7 |
+| [现代思想中的恶](books/07_哲学与宗教/哲学/evil-in-modern-thought.md) | 苏珊·奈曼（Susan Neiman） | ideas (哲学思想史) | 2026-09-16 | 5 |
+| [「错误」的行为](books/03_经济与投资/经济理论/misbehaving.md) | 理查德·塞勒 | ideas 0.75 + narrative 0.25 (行为经济学形成史·编年战史) | 2026-09-17 | 4 |
+| [思考，快与慢](books/04_心理与个人成长/心理学/thinking-fast-slow.md) | 丹尼尔·卡尼曼 | ideas 0.7 + knowledge 0.3 (判断与决策理论综述·行为科学集成) | 2026-09-17 | 4 |
+| [刻意练习](books/04_心理与个人成长/思维与批判性思考/keyi-lianxi.md) | 安德斯·艾利克森 & 罗伯特·普尔 | knowledge 0.8 + ideas 0.2 (学习方法论·专长研究转译) | 2026-09-17 | 4 |
+| [理论法学的迷雾](books/05_社会与法律/法律/lilun-fazue-miwu.md) | 桑本谦 | ideas 0.85 + knowledge 0.15 (社科法学/法律经济学论战集) | 2026-09-17 | 4 |
+| [正义女神不睁眼](books/05_社会与法律/法律/zhengyi-nvshen-buzhengyan.md) | 知乎 编（37 位从业者） | knowledge 0.7 + ideas 0.3 (法律通识问答集·众包普法) | 2026-09-17 | 7 |
+| [大明王朝1566](books/09_文学与语言/小说/da-ming-wangchao-1566.md) | 刘和平 | fiction 0.9 + ideas 0.1 (历史政治小说·宇宙首个 fiction) | 2026-09-18 | 6 |
+| [简单的逻辑学](books/04_心理与个人成长/思维与批判性思考/being-logical.md) | D. Q. 麦克伦尼（D. Q. McInerny） | knowledge (逻辑学入门方法论) + ideas 0.3 (哲学) | 2026-09-19 | 4 |
 <!-- AUTO:books:end -->
 
 ## 主题域子图
